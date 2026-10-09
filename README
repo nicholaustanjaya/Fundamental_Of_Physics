@@ -1,1 +1,58 @@
-Saya akan coba untuk menuliskan kode dalam Matlab, Simulink, dan Python untuk mencari solusi dari permasalahan di dalam buku Fundamental Of Physics by Halliday & Resnick
+# 🪐 Physics with MATLAB, Simulink & Simscape
+
+> Komputasi, simulasi, dan pemodelan sistem fisik berbasis buku teks legendaris **"Fundamentals of Physics" (Halliday & Resnick)**.
+
+---
+
+## 📌 Tentang Repositori Ini
+
+Belajar fisika bukan hanya tentang menghafal rumus di atas kertas—tetapi bagaimana menerjemahkan prinsip fundamental ke dalam model dunia nyata.
+
+Repositori ini menyajikan solusi komputasi dan pemodelan sistem dinamis untuk problem di buku **Halliday & Resnick**. Alih-alih hanya menyelesaikan persamaan analitik, fokus utama repositori ini adalah:
+
+1. **Komputasi Numerik:** Menyelesaikan persamaan gerak non-linear dan kondisi batas matematis via MATLAB.
+2. **Pemodelan Berbasis Blok (Simulink):** Memvisualisasikan aliran sinyal dan loop umpan balik (feedback loops).
+3. **Physical Modeling (Simscape):** Memodelkan interaksi fisika multi-domain (mekanika, fluida, termal, elektromagnetik) berbasis konservasi energi dan port fisik tanpa harus menyusun diferensial manual yang rumit.
+
+---
+
+## 📚 Topik & Cakupan Bab
+
+Sebagian besar bab utama akan dibahas bertahap, mencakup:
+
+* **Mekanika Klasik (Classical Mechanics):**
+  * Kinematika 1D/2D/3D & Gerak Parabola dengan Drag Udara
+  * Dinamika Newton, Gesekan, dan Sistem Katrol/Tali
+  * Kerja, Energi, dan Konservasi Momentum
+  * Rotasi Benda Tegar, Torsi, dan Momentum Sudut
+  * Osilasi Harmonik Sederhana & Teredam (*Damped & Forced Oscillations*)
+  * Gravitasi & Mekanika Orbit
+* **Mekanika Fluida & Termodinamika:**
+  * Statika/Dinamika Fluida (Persamaan Bernoulli, Viskositas)
+  * Perpindahan Kalor & Hukum Termodinamika (Simscape Thermal)
+* **Elektromagnetisme & Gelombang:**
+  * Elektrostatika, Rangkaian RLC, dan Induksi Elektromagnetik
+  * Teori Gelombang & Optika
+
+---
+
+## 🛠️ Tech Stack & Tools
+
+* **MATLAB:** Analisis data, plot analitik vs. numerik, dan *solver* diferensial (`ode45`, dsb.).
+* **Simulink:** Pemodelan diagram blok sistem dinamis.
+* **Simscape:** Pemodelan fisik berbasis komponen (Mekanik, Elektrik, Termal).
+* *(Opsional)* **Python / Jupyter Notebook:** Validasi skrip dengan NumPy, SciPy, dan Matplotlib.
+
+---
+
+## 📁 Struktur Direktori
+
+```text
+├── chapter-02-motion-along-a-straight-line/
+│   ├── matlab/          # Skrip solver numerik & plotting (.m)
+│   ├── simulink/        # Model diagram blok (.slx)
+│   ├── simscape/        # Model physical network (.slx)
+│   └── README.md        # Ringkasan teori & parameter problem
+├── chapter-05-force-and-motion/
+│   └── ...
+└── docs/                # Gambar, diagram blok, dan dokumentasi pendukung
