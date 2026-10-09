@@ -5,24 +5,33 @@
 % a = dv/dt
 % dv = a dt
 
-tic
-a = 5;
-dt = 0.000001; % must be 1 million time smaller to be precise
-t1 = 0;
-t2 = 100;
-v = 0;
-for t = t1:dt:t2
-    v = v + a * dt;
-end
-v
-toc
+% tic
+% a = 5;
+% dt = 0.000001; % must be 1 million time smaller to be precise
+% t1 = 0;
+% t2 = 100;
+% v = 0;
+% for t = t1:dt:t2
+%     v = v + a * dt;
+% end
+% v
+% toc
 
 % With Symbolic Math toolbox
-tic
-syms v(t) a t
-a = 5;
-v(t) = a * t;
-v(100)
-toc
+% tic
+x_0_m = 5;
+v_0_m_s = 10;
+a_0_m_s2 = 1;
+
+syms v(t) a(t) t
+a(t) = 5;
+% v(t) = a(t) * t + v_0_m_s;
+v(t) = int(a*t,t)
+v(10)
+% toc
+
+syms x(t)
+x(t) = int(v(t),t)
+x(10)
 
 
